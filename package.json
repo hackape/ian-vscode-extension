@@ -1,0 +1,90 @@
+{
+  "name": "vscode-aide",
+  "displayName": "AI Studio dev helper",
+  "description": "In house extension to facilitate development of the AI Studio project",
+  "icon": "resources/logo-128x128.png",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "out/extension.js",
+  "publisher": "hackape",
+
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "AI Studio dev helper - Configuration",
+      "properties": {
+        "aide.option": {
+          "type": "boolean",
+          "description": "This is an option",
+          "default": true
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "aide.command",
+        "title": "AI Studio dev helper: Command"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "aide.command",
+        "key": "ctrl+extra",
+        "mac": "cmd+extra"
+      }
+    ]
+  },
+
+  "scripts": {
+    "vscode:prepublish": "rm -rf out && webpack --mode production",
+    "publish": "vsce publish && npm publish",
+    "compile": "webpack --mode development",
+    "compile:watch": "webpack --mode development --watch",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "bugs": {
+    "url": "https://github.com/hackape/vscode-aide/issues"
+  },
+  "author": {
+    "name": "Zhang Shuo",
+    "email": "zhangshuo@4paradigm.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hackape/vscode-aide.git"
+  },
+  "engines": {
+    "vscode": "^1.15.0"
+  },
+
+  "keywords": [
+    "vscode",
+    "vsc",
+    "extension"
+  ],
+  "categories": [
+    "Other"
+  ],
+
+  "dependencies": {
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^6.0.40",
+    "absolute": "0.0.1",
+    "chokidar": "^2.0.3",
+    "json5": "^0.5.1",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
+    "pify": "^3.0.0"
+  },
+  "devDependencies": {
+    "ts-loader": "^5.2.1",
+    "typescript": "^3.0.3",
+    "vscode": "^1.1.4",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
