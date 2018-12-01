@@ -1,7 +1,7 @@
 {
-  "name": "vscode-aide",
-  "displayName": "AI Studio dev helper",
-  "description": "In house extension to facilitate development of the AI Studio project",
+  "name": "ian-vscode-extension",
+  "displayName": "Ian: AI Studio Dev Assistant",
+  "description": "In house vscode extension to assist development of the AI Studio project",
   "icon": "resources/logo-128x128.png",
   "version": "0.1.0",
   "license": "MIT",
@@ -11,9 +11,18 @@
     "*"
   ],
   "contributes": {
+    "viewsContainers": {
+			"activitybar": [
+				{
+					"id": "ian",
+					"title": "Ian",
+					"icon": "resources/prophet-logo.png"
+				}
+			]
+		},
     "configuration": {
       "type": "object",
-      "title": "AI Studio dev helper - Configuration",
+      "title": "Ian: AI Studio Dev Assistant - Configuration",
       "properties": {
         "aide.option": {
           "type": "boolean",
@@ -24,13 +33,13 @@
     },
     "commands": [
       {
-        "command": "aide.command",
+        "command": "ian.command",
         "title": "AI Studio dev helper: Command"
       }
     ],
     "keybindings": [
       {
-        "command": "aide.command",
+        "command": "ian.command",
         "key": "ctrl+extra",
         "mac": "cmd+extra"
       }
@@ -47,7 +56,7 @@
     "test": "node ./node_modules/vscode/bin/test"
   },
   "bugs": {
-    "url": "https://github.com/hackape/vscode-aide/issues"
+    "url": "https://github.com/hackape/ian-vscode-extension/issues"
   },
   "author": {
     "name": "Zhang Shuo",
@@ -55,7 +64,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hackape/vscode-aide.git"
+    "url": "https://github.com/hackape/ian-vscode-extension.git"
   },
   "engines": {
     "vscode": "^1.15.0"

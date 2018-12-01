@@ -1,17 +1,17 @@
 # AI Studio dev helper
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hackape/vscode-aide/master/resources/logo.png" width="128" alt="Logo">
+  <img src="https://raw.githubusercontent.com/hackape/ian-vscode-extension/master/resources/logo.png" width="128" alt="Logo">
 </p>
 
 In house extension to facilitate development of the AI Studio project
 
 ## Install
 
-Follow the instructions in the [Marketplace](https://marketplace.visualstudio.com/items?itemName=hackape.vscode-aide), or run the following in the command palette:
+Follow the instructions in the [Marketplace](https://marketplace.visualstudio.com/items?itemName=hackape.ian-vscode-extension), or run the following in the command palette:
 
 ```sh
-ext install hackape.vscode-aide
+ext install hackape.ian-vscode-extension
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ AI Studio dev helper: Command // Does something
 
 ## Contributing
 
-If you found a problem, or have a feature request, please open an [issue](https://github.com/hackape/vscode-aide/issues) about it.
+If you found a problem, or have a feature request, please open an [issue](https://github.com/hackape/ian-vscode-extension/issues) about it.
 
 If you want to make a pull request you can debug the extension using [Debug Launcher](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-debug-launcher).
 

@@ -13,7 +13,7 @@ import * as Commands from "./commands";
 
 const Utils = {
   initCommands(context: vscode.ExtensionContext) {
-    const { commands } = vscode.extensions.getExtension("hackape.vscode-aide").packageJSON.contributes;
+    const { commands } = vscode.extensions.getExtension("hackape.ian-vscode-extension").packageJSON.contributes;
 
     commands.forEach(({ command, title }) => {
       const commandName = _.last(command.split(".")) as string,
