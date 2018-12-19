@@ -1,11 +1,10 @@
-/* IMPORT */
+import * as vscode from 'vscode';
+import { RepoTreeProvider} from './reposView'
 
-import Utils from "./utils";
+export function activate(context: vscode.ExtensionContext) {
 
-/* ACTIVATE */
-
-const activate = Utils.initCommands;
-
-/* EXPORT */
-
-export { activate };
+	const repoTreeProvider = new RepoTreeProvider(vscode.workspace.rootPath);
+	vscode.window.registerTreeDataProvider('repos', repoTreeProvider);
+	vscode.commands.registerCommand('repos.refresh', () => repoTreeProvider.refresh());
+	vscode.commands.registerCommand('repos.openEntry', (repo) => repoTreeProvider.openEntry(repo));
+}
