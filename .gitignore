@@ -44,3 +44,4 @@ out
 
 yarn.lock
 *.psd
+*.vsix
