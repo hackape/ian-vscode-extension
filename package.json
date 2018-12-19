@@ -7,6 +7,7 @@
   "license": "MIT",
   "main": "out/extension.js",
   "publisher": "hackape",
+  "private": true,
   "activationEvents": [
     "workspaceContains:.monorepo"
   ],
@@ -86,11 +87,10 @@
     ]
   },
   "scripts": {
+    "start": "webpack --mode development --watch",
     "vscode:prepublish": "rm -rf out && webpack --mode production",
-    "publish": "vsce publish && npm publish",
     "compile": "webpack --mode development",
     "watch": "tsc -watch -p ./",
-    "compile:watch": "webpack --mode development --watch",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "node ./node_modules/vscode/bin/test"
   },
