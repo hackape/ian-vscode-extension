@@ -2,7 +2,7 @@
   "name": "ian-vscode-extension",
   "displayName": "Ian: AI Studio Dev Assistant",
   "description": "In house vscode extension to assist development of the AI Studio project",
-  "icon": "resources/logo-128x128.png",
+  "icon": "resources/prophet-logo.png",
   "version": "0.1.0",
   "license": "MIT",
   "main": "out/extension.js",
