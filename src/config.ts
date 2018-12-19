@@ -6,7 +6,7 @@ import * as JSON5 from "json5";
 import * as os from "os";
 import * as path from "path";
 import * as vscode from "vscode";
-import Utils from "./utils";
+import Utils from "./utils/utils";
 
 /* CONFIG */
 

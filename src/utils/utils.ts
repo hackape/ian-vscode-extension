@@ -7,7 +7,7 @@ import * as mkdirp from "mkdirp";
 import * as path from "path";
 import * as pify from "pify";
 import * as vscode from "vscode";
-import * as Commands from "./commands";
+import * as Commands from "../commands";
 
 /* UTILS */
 
@@ -18,7 +18,7 @@ const Utils = {
     commands.forEach(({ command, title }) => {
       const commandName = _.last(command.split(".")) as string,
         handler = Commands[commandName],
-        disposable = vscode.commands.registerCommand(command, () => handler());
+        disposable = vscode.commands.registerCommand(command, (...args) => handler(...args));
 
       context.subscriptions.push(disposable);
     });

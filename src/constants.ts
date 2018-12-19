@@ -1,0 +1,1 @@
+export const MARKER_FOLDER = '.monorepo';
