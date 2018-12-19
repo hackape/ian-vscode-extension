@@ -7,24 +7,23 @@ import * as mkdirp from "mkdirp";
 import * as path from "path";
 import * as pify from "pify";
 import * as vscode from "vscode";
-import * as Commands from "../commands";
 
 /* UTILS */
 
 const Utils = {
-  initCommands(context: vscode.ExtensionContext) {
-    const { commands } = vscode.extensions.getExtension("hackape.ian-vscode-extension").packageJSON.contributes;
+  // initCommands(context: vscode.ExtensionContext) {
+  //   const { commands } = vscode.extensions.getExtension("hackape.ian-vscode-extension").packageJSON.contributes;
 
-    commands.forEach(({ command, title }) => {
-      const commandName = _.last(command.split(".")) as string,
-        handler = Commands[commandName],
-        disposable = vscode.commands.registerCommand(command, (...args) => handler(...args));
+  //   commands.forEach(({ command, title }) => {
+  //     const commandName = _.last(command.split(".")) as string,
+  //       handler = Commands[commandName],
+  //       disposable = vscode.commands.registerCommand(command, (...args) => handler(...args));
 
-      context.subscriptions.push(disposable);
-    });
+  //     context.subscriptions.push(disposable);
+  //   });
 
-    return Commands;
-  },
+  //   return Commands;
+  // },
 
   isInsiders() {
     return !!vscode.env.appName.match(/insiders/i);

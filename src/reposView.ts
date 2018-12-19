@@ -77,7 +77,6 @@ export class RepoTreeProvider implements vscode.TreeDataProvider<Repo> {
     const monorepoFolder = vscode.workspace.workspaceFolders[0];
     await updateWorkspaceFolders(0, vscode.workspace.workspaceFolders.length, { uri: monorepoFolder.uri }, ...repoUriList);
     vscode.commands.executeCommand('workbench.view.explorer');
-    vscode.commands.executeCommand('workbench.action.reloadWindow');
   }
 
   getTreeItem(element: Repo): vscode.TreeItem {
